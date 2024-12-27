@@ -1,47 +1,24 @@
-/* Fix for header visibility issues */
-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  background-color: var(--dark-primary);
-  padding: 10px 15px; /* Ensure minimal padding for more content space */
-  color: #fff;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  z-index: 1000; /* Ensure the header is always visible */
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
-}
-
-/* Menu items adjustments for better spacing */
-header ul {
-  display: flex;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  gap: 10px; /* Adds space between menu items */
-}
-
-header ul li {
-  margin: 0;
-}
-
-/* Mobile-specific fixes */
+/* Header adjustments for mobile */
 @media only screen and (max-width: 768px) {
   header {
-    flex-direction: column; /* Stack items vertically */
-    padding: 15px; /* Add a bit more padding for a neat appearance */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--dark-primary);
+    padding: 10px 20px; /* Reduce padding for better visibility */
+    color: #fff;
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center;
+    z-index: 1000; /* Ensure header stays above all other elements */
   }
-
   header ul {
     flex-direction: column; /* Stack menu items vertically */
-    width: 100%; /* Use full width for menu */
-    text-align: center;
-    gap: 15px; /* Add more space between items */
+    gap: 10px; /* Add spacing between items */
+    margin-top: 10px;
   }
-
-  header ul li a {
-    font-size: 14px; /* Slightly smaller font size for better fit */
+  header ul li {
+    margin-right: 0; /* Remove horizontal margin */
   }
 }
